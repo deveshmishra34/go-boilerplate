@@ -1,0 +1,39 @@
+####Build login and logout flow with refresh token 
+
+# Login Flow
+1. User provides their credentials (username and password).
+2. Server verifies the credentials.
+3. If the credentials are valid, generate a refresh token and an access token.
+4. Store the refresh token securely on the server.
+5. Send the access token back to the client.
+6. Client stores the access token securely (e.g., in a cookie or local storage).
+
+# Send and Resend OTP
+1. User requests to send OTP.
+2. Server generates a new OTP and associates it with the user's account.
+3. Server sends the OTP to the user's registered email or phone number.
+4. Client displays a message to the user indicating that the OTP has been sent.
+
+# Resend OTP
+1. User requests to resend OTP.
+2. Server generates a new OTP and updates it for the user's account.
+3. Server sends the new OTP to the user's registered email or phone number.
+4. Client displays a message to the user indicating that the new OTP has been sent.
+
+
+# Token Exchange with refresh token
+1. User sends a request to the server to exchange the refresh token for a new access token.
+2. Server verifies the refresh token.
+3. If the refresh token is valid, generate a new access token.
+4. Send the new access token back to the client.
+5. Client stores the new access token securely (e.g., in a cookie or local storage).
+
+
+# Logout Flow
+1. User initiates the logout process (e.g., by clicking on a "Logout" button).
+2. Client sends a request to the server to invalidate the refresh token.
+3. Server deletes the refresh token from the storage.
+4. Server may also invalidate the access token (optional).
+5. Client clears the stored access token (e.g., by removing the cookie or clearing local storage).
+6. User is logged out and redirected to the login page (optional).
+

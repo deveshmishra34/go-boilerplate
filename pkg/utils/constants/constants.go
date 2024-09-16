@@ -85,6 +85,8 @@ const (
 	MSG_FORBIDDEN                   string = "forbidden"
 	MSG_UNKNOWN_DB_PLATFORM         string = "unknown database platform"
 	MSG_INTERNAL_SERVER             string = "internal server error"
+	MSG_INVALID_CREDENTIALS         string = "invalid credentials"
+	MSG_FIELD_MISSING               string = "missing fields"
 
 	// output status codes
 	STATUS_CODE_SERVICE_SUCCESS                            string = "20001"
@@ -132,4 +134,6 @@ var (
 	ERROR_BINDING_BODY         = errors.New(MSG_UNABLE_TO_BIND_BODY)
 	ERROR_UNKNOWN_DB_PLATFORM  = errors.New(MSG_UNKNOWN_DB_PLATFORM)
 	ERROR_INTERNAL_SERVER      = errors.New(MSG_INTERNAL_SERVER)
+	ERROR_MISSING_FIELDS       = errors.New(MSG_FIELD_MISSING)
+	ERROR_INVALID_CREDS        = errors.New(MSG_INVALID_CREDENTIALS)
 )

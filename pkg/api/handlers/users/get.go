@@ -9,22 +9,36 @@ import (
 	"net/http"
 
 	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/clients/kratos"
+	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
+	"github.com/codoworks/go-boilerplate/pkg/db/models"
 	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
 
 	"github.com/labstack/echo/v4"
 )
 
 func Get(c echo.Context) error {
-	id, err := handlers.GetUUIDParam(c.Param("id"))
-	if err != nil {
-		c.Echo().Logger.Error(constants.ERROR_ID_NOT_FOUND)
-		return constants.ERROR_ID_NOT_FOUND
+	id := c.Param("id")
+
+	if id == "" {
+		return helpers.Error(c, constants.ERROR_ID_NOT_FOUND, nil)
 	}
-	kratosCli := kratos.GetClient()
-	identity, err := kratosCli.GetIdentity(id.String())
+
+	m, err := models.UserModel().Find(id)
 	if err != nil {
-		return err
+		return helpers.Error(c, err, nil)
 	}
-	return c.JSON(http.StatusOK, handlers.Success(identity))
+
+	return c.JSON(http.StatusOK, handlers.Success(m.MapToForm()))
+
+	// id, err := handlers.GetUUIDParam(c.Param("id"))
+	// if err != nil {
+	// 	c.Echo().Logger.Error(constants.ERROR_ID_NOT_FOUND)
+	// 	return constants.ERROR_ID_NOT_FOUND
+	// }
+	// kratosCli := kratos.GetClient()
+	// identity, err := kratosCli.GetIdentity(id.String())
+	// if err != nil {
+	// 	return err
+	// }
+	// return c.JSON(http.StatusOK, handlers.Success(identity))
 }

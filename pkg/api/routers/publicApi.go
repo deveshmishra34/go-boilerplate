@@ -9,6 +9,7 @@ import (
 	catsHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/cats"
 	"github.com/codoworks/go-boilerplate/pkg/api/handlers/errors"
 	healthHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/healthz"
+	usersHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/users"
 	"github.com/codoworks/go-boilerplate/pkg/api/middlewares"
 	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
 	"github.com/codoworks/go-boilerplate/pkg/config"
@@ -85,6 +86,7 @@ func registerPublicApiSecurityMiddlewares() {
 }
 
 func registerPublicApiErrorHandlers() {
+	logger.Debug("registerPublicApiErrorHandlers")
 	publicApiRouter.Echo.HTTPErrorHandler = errors.AutomatedHttpErrorHandler()
 	publicApiRouter.Echo.RouteNotFound("/*", errors.NotFound)
 }
@@ -96,11 +98,27 @@ func registerPublicApiHealthCheckHandlers() {
 }
 
 func registerPublicAPIRoutes() {
+	// add all public routes here
+
+	// cats routes
 	cats := publicApiRouter.Echo.Group("/cats")
 	cats.GET("", catsHandlers.Index)
 	cats.GET("/:id", catsHandlers.Get)
 	cats.POST("", catsHandlers.Post)
 	cats.PUT("/:id", catsHandlers.Put)
 	cats.DELETE("/:id", catsHandlers.Delete)
+
+	// users routes
+	users := publicApiRouter.Echo.Group("/users")
+	users.GET("", usersHandlers.GetAll)
+	users.GET("/:id", usersHandlers.Get)
+	users.PUT("/:id", usersHandlers.Put)
+	users.DELETE("/:id", usersHandlers.Delete)
+
+	users.POST("/register", usersHandlers.Post)
+	users.POST("/login", usersHandlers.LoginUserWithPassword)
+	users.POST("/get-access-token", usersHandlers.LoginUserWithPassword)
+	users.POST("/request-otp", usersHandlers.SendOtp)
+
 	// add more routes here ...
 }

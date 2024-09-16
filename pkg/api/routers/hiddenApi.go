@@ -82,7 +82,7 @@ func registerHiddenApiSecurityMiddlewares() {
 	}
 
 	if config.Feature(constants.FEATURE_ORY_KRATOS).IsEnabled() {
-		hiddenApiRouter.RegisterMiddleware(middlewares.AuthenticationMiddleware())
+		hiddenApiRouter.RegisterMiddleware(middlewares.AuthenticationWithOryKetoMiddleware())
 	}
 
 	// if config.Feature(constants.FEATURE_ORY_KETO).IsEnabled() {

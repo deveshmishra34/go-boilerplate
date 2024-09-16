@@ -8,6 +8,12 @@ package users
 import (
 	"net/http"
 
+	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
+	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
+	"github.com/codoworks/go-boilerplate/pkg/db/models"
+	"github.com/codoworks/go-boilerplate/pkg/utils"
+	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+
 	"github.com/labstack/echo/v4"
 )
 
@@ -27,5 +33,29 @@ func Post(c echo.Context) error {
 	// 	return err
 	// }
 	// return c.JSON(http.StatusOK, handlers.Success(identity))
-	return c.JSON(http.StatusOK, nil)
+
+	f := &models.UserForm{}
+	if err := c.Bind(f); err != nil {
+		return helpers.Error(c, constants.ERROR_BINDING_BODY, err)
+	}
+	if err := helpers.Validate(f); err != nil {
+		return c.JSON(http.StatusBadRequest, handlers.ValidationErrors(err))
+	}
+
+	// Todo: Changes this hashing algorithm to a more secure and optimise one
+	// Hashing the password with a random salt
+	hashedPassword, err := utils.HashPassword(f.Password)
+
+	if err != nil {
+		return helpers.Error(c, constants.ERROR_INTERNAL_SERVER, err)
+	}
+	f.Password = string(hashedPassword)
+
+	m := f.MapToModel()
+
+	if err := m.Save(); err != nil {
+		return helpers.Error(c, err, nil)
+	}
+
+	return c.JSON(http.StatusOK, handlers.Success(m.MapToForm()))
 }

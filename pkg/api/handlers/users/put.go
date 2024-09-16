@@ -3,7 +3,7 @@ Copyright © 2023 Codoworks
 Author:  Dexter Codo
 Contact: dexter.codo@gmail.com
 */
-package cats
+package users
 
 import (
 	"net/http"
@@ -16,17 +16,32 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func Delete(c echo.Context) error {
+func Put(c echo.Context) error {
 
 	id := c.Param("id")
+
 	if id == "" {
 		return helpers.Error(c, constants.ERROR_ID_NOT_FOUND, nil)
 	}
 
-	if err := models.CatModel().Delete(id); err != nil {
+	f := &models.UserForm{}
+
+	if err := c.Bind(f); err != nil {
+		return helpers.Error(c, constants.ERROR_BINDING_BODY, err)
+	}
+
+	if err := helpers.Validate(f); err != nil {
+		return c.JSON(http.StatusBadRequest, handlers.ValidationErrors(err))
+	}
+
+	m := f.MapToModel()
+
+	m.ID = id
+
+	if err := m.Update(); err != nil {
 		return helpers.Error(c, err, nil)
 	}
 
-	return c.JSON(http.StatusAccepted, handlers.Deleted())
+	return c.JSON(http.StatusOK, handlers.Success(m.MapToForm()))
 
 }

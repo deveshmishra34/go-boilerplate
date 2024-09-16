@@ -6,7 +6,6 @@ Contact: dexter.codo@gmail.com
 package routers
 
 import (
-	catsHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/cats"
 	"github.com/codoworks/go-boilerplate/pkg/api/handlers/errors"
 	healthHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/healthz"
 	usersHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/users"
@@ -84,13 +83,15 @@ func registerProtectedApiSecurityMiddlewares() {
 	}
 
 	if config.Feature(constants.FEATURE_ORY_KRATOS).IsEnabled() {
-		protectedApiRouter.RegisterMiddleware(middlewares.AuthenticationMiddleware())
+		protectedApiRouter.RegisterMiddleware(middlewares.AuthenticationWithOryKetoMiddleware())
 	}
 
-	if config.Feature(constants.FEATURE_ORY_KETO).IsEnabled() {
-		// keto middleware <- this will check if the user has the right permissions like system admin
-		// protectedApiRouter.RegisterMiddleware(middlewares.AuthenticationMiddleware())
-	}
+	// if config.Feature(constants.FEATURE_ORY_KETO).IsEnabled() {
+	// 	// keto middleware <- this will check if the user has the right permissions like system admin
+	// 	protectedApiRouter.RegisterMiddleware(middlewares.AuthenticationWithOryKetoMiddleware())
+	// }
+
+	protectedApiRouter.RegisterMiddleware(middlewares.AuthenticationWithJWTMiddleware())
 }
 
 func registerProtectedApiErrorHandlers() {
@@ -105,19 +106,12 @@ func registerProtectedApiHealthCheckHandlers() {
 }
 
 func registerProtectedAPIRoutes() {
-	cats := protectedApiRouter.Echo.Group("/cats")
-	cats.GET("", catsHandlers.Index)
-	cats.GET("/:id", catsHandlers.Get)
-	cats.POST("", catsHandlers.Post)
-	cats.PUT("/:id", catsHandlers.Put)
-	cats.DELETE("/:id", catsHandlers.Delete)
 
+	// users routes
 	users := protectedApiRouter.Echo.Group("/users")
-	users.GET("", usersHandlers.Index)
-	users.GET("/:id", usersHandlers.Get)
-	users.POST("", usersHandlers.Post)
-	// users.PUT("/:id", usersHandlers.Put)
-	users.DELETE("/:id", usersHandlers.Delete)
+	users.GET("/info", usersHandlers.Info)
+	users.POST("/logout", usersHandlers.LogoutHandler)
+	users.POST("/exchange-token", usersHandlers.ExchangeToken)
 
 	// add more routes here ...
 }
