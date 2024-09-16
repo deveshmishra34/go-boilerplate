@@ -1,14 +1,9 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package errors
 
 import (
 	"net/http"
 
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 
 	"gorm.io/gorm"
 )

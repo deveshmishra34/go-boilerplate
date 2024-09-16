@@ -1,14 +1,9 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package cors
 
 import (
 	"reflect"
 
-	"github.com/codoworks/go-boilerplate/pkg/config/features"
+	"github.com/deveshmishra34/groot/pkg/config/features"
 )
 
 type CorsClient struct {

@@ -1,11 +1,6 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package main
 
-import "github.com/codoworks/go-boilerplate/cmd"
+import "github.com/deveshmishra34/groot/cmd"
 
 var VERSION string = "2.2.1-default"
 

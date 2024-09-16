@@ -1,13 +1,8 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package dbc
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/clients/dbc/adapters"
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/pkg/clients/dbc/adapters"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 
 	"gorm.io/gorm"
 	gLogger "gorm.io/gorm/logger"

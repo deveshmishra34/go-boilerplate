@@ -1,17 +1,12 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package routers
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers/errors"
-	healthHandlers "github.com/codoworks/go-boilerplate/pkg/api/handlers/healthz"
-	"github.com/codoworks/go-boilerplate/pkg/api/middlewares"
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/config"
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/pkg/api/handlers/errors"
+	healthHandlers "github.com/deveshmishra34/groot/pkg/api/handlers/healthz"
+	"github.com/deveshmishra34/groot/pkg/api/middlewares"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/config"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 )
 
 var hiddenApiRouter *Router

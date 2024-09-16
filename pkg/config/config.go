@@ -1,11 +1,6 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package config
 
-import "github.com/codoworks/go-boilerplate/pkg/config/features"
+import "github.com/deveshmishra34/groot/pkg/config/features"
 
 func InitEnv() {
 	Env.Init()

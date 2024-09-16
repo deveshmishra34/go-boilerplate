@@ -3,8 +3,8 @@ package users
 import (
 	"net/http"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/api/handlers"
+	"github.com/deveshmishra34/groot/pkg/utils"
 	"github.com/labstack/echo/v4"
 )
 

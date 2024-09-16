@@ -1,11 +1,6 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package features
 
-import "github.com/codoworks/go-boilerplate/pkg/utils/constants"
+import "github.com/deveshmishra34/groot/pkg/utils/constants"
 
 type RedisConfig struct {
 	Host     string `mapstructure:"REDIS_HOST"`

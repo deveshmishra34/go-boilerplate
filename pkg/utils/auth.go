@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/db/models"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
 	"golang.org/x/crypto/bcrypt"

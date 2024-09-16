@@ -1,12 +1,7 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package middlewares
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/utils"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

@@ -1,15 +1,10 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package users
 
 import (
 	"net/http"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/clients/kratos"
+	"github.com/deveshmishra34/groot/pkg/api/handlers"
+	"github.com/deveshmishra34/groot/pkg/clients/kratos"
 
 	"github.com/labstack/echo/v4"
 )

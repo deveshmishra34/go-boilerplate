@@ -1,8 +1,3 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package users
 
 import (
@@ -10,11 +5,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
-	"github.com/codoworks/go-boilerplate/pkg/utils"
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/pkg/api/handlers"
+	"github.com/deveshmishra34/groot/pkg/api/helpers"
+	"github.com/deveshmishra34/groot/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 
 	"github.com/labstack/echo/v4"
 )

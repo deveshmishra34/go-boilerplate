@@ -1,14 +1,9 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package tasks
 
 import (
 	"fmt"
 
-	"github.com/codoworks/go-boilerplate/pkg/config"
+	"github.com/deveshmishra34/groot/pkg/config"
 
 	"github.com/jedib0t/go-pretty/v6/table"
 )

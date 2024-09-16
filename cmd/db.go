@@ -1,15 +1,10 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package cmd
 
 import (
-	"github.com/codoworks/go-boilerplate/cmd/db"
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/proc"
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/cmd/db"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/proc"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 
 	"github.com/spf13/cobra"
 )

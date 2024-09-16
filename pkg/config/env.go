@@ -1,17 +1,12 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package config
 
 import (
 	"fmt"
 	"reflect"
 
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/config/features"
-	"github.com/codoworks/go-boilerplate/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/config/features"
+	"github.com/deveshmishra34/groot/pkg/utils"
 
 	"github.com/jedib0t/go-pretty/v6/table"
 )

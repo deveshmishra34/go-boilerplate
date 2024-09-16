@@ -1,14 +1,9 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package proc
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/clients/dbc"
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/db/migrations"
+	"github.com/deveshmishra34/groot/pkg/clients/dbc"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/db/migrations"
 )
 
 func DBRollback() {

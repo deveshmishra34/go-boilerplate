@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
-	"github.com/codoworks/go-boilerplate/pkg/utils"
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/pkg/api/handlers"
+	"github.com/deveshmishra34/groot/pkg/api/helpers"
+	"github.com/deveshmishra34/groot/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/labstack/echo/v4"
 )

@@ -1,8 +1,3 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package kratos
 
 import (
@@ -11,7 +6,7 @@ import (
 	"net/http"
 	"reflect"
 
-	"github.com/codoworks/go-boilerplate/pkg/config/features"
+	"github.com/deveshmishra34/groot/pkg/config/features"
 
 	oryKratos "github.com/ory/kratos-client-go"
 )

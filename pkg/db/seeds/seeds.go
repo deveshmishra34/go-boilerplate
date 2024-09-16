@@ -1,12 +1,7 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package seeds
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
 
 	"github.com/go-gormigrate/gormigrate/v2"
 	"gorm.io/gorm"

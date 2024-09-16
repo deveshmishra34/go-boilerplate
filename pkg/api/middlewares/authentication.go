@@ -1,18 +1,13 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package middlewares
 
 import (
 	"errors"
 	"fmt"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
-	"github.com/codoworks/go-boilerplate/pkg/clients/kratos"
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
-	"github.com/codoworks/go-boilerplate/pkg/utils/constants"
+	"github.com/deveshmishra34/groot/pkg/api/helpers"
+	"github.com/deveshmishra34/groot/pkg/clients/kratos"
+	"github.com/deveshmishra34/groot/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/utils/constants"
 	"github.com/golang-jwt/jwt/v5"
 
 	"github.com/labstack/echo/v4"

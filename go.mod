@@ -1,4 +1,4 @@
-module github.com/codoworks/go-boilerplate
+module github.com/deveshmishra34/groot
 
 go 1.21
 

@@ -1,24 +1,19 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package proc
 
 import (
 	"fmt"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/routers"
-	clientsPkg "github.com/codoworks/go-boilerplate/pkg/clients"
-	"github.com/codoworks/go-boilerplate/pkg/clients/cors"
-	"github.com/codoworks/go-boilerplate/pkg/clients/dbc"
-	"github.com/codoworks/go-boilerplate/pkg/clients/gzip"
-	"github.com/codoworks/go-boilerplate/pkg/clients/kratos"
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/clients/service"
-	"github.com/codoworks/go-boilerplate/pkg/config"
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
-	"github.com/codoworks/go-boilerplate/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/api/routers"
+	clientsPkg "github.com/deveshmishra34/groot/pkg/clients"
+	"github.com/deveshmishra34/groot/pkg/clients/cors"
+	"github.com/deveshmishra34/groot/pkg/clients/dbc"
+	"github.com/deveshmishra34/groot/pkg/clients/gzip"
+	"github.com/deveshmishra34/groot/pkg/clients/kratos"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/clients/service"
+	"github.com/deveshmishra34/groot/pkg/config"
+	"github.com/deveshmishra34/groot/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/utils"
 )
 
 func InitServiceEnv(serviceName string, version string) {

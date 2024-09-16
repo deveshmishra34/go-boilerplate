@@ -1,10 +1,10 @@
 
 # Codoworks Go Boilerplate
 
-[![Go Build](https://github.com/codoworks/go-boilerplate/actions/workflows/go.yml/badge.svg)](https://github.com/codoworks/go-boilerplate/actions/workflows/go.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/codoworks/go-boilerplate)](https://goreportcard.com/report/github.com/codoworks/go-boilerplate)
-[![CodeQL](https://github.com/codoworks/go-boilerplate/actions/workflows/codeql.yml/badge.svg)](https://github.com/codoworks/go-boilerplate/actions/workflows/codeql.yml)
-[![Codacy Security Scan](https://github.com/codoworks/go-boilerplate/actions/workflows/codacy.yml/badge.svg)](https://github.com/codoworks/go-boilerplate/actions/workflows/codacy.yml)
+[![Go Build](https://github.com/deveshmishra34/groot/actions/workflows/go.yml/badge.svg)](https://github.com/deveshmishra34/groot/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/deveshmishra34/groot)](https://goreportcard.com/report/github.com/deveshmishra34/groot)
+[![CodeQL](https://github.com/deveshmishra34/groot/actions/workflows/codeql.yml/badge.svg)](https://github.com/deveshmishra34/groot/actions/workflows/codeql.yml)
+[![Codacy Security Scan](https://github.com/deveshmishra34/groot/actions/workflows/codacy.yml/badge.svg)](https://github.com/deveshmishra34/groot/actions/workflows/codacy.yml)
 [![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
 This is a backend service skeleton or boilerplate to speed up development process. Over time, this package has become opinionated and behaves more like a framework with a set of predefined features.
@@ -306,7 +306,7 @@ From a containerisation perspective, I'd encourage you to place this binary in a
 This section is all about extending the service to create your own application and APIs. 
 
 <a name="change-pkg-name"></a>
-> The first thing you should do is to change the package name, find `github.com/codoworks/go-boilerplate` in all the files and replace it with your own package name. You can choose to use the general `github.com/(org-name)/(project-name)` naming pattern for consistency.
+> The first thing you should do is to change the package name, find `github.com/deveshmishra34/groot` in all the files and replace it with your own package name. You can choose to use the general `github.com/(org-name)/(project-name)` naming pattern for consistency.
 
 
 <details>

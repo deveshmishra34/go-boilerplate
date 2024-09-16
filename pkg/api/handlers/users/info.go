@@ -1,17 +1,12 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package users
 
 import (
 	"net/http"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
-	"github.com/codoworks/go-boilerplate/pkg/clients/logger"
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/api/handlers"
+	"github.com/deveshmishra34/groot/pkg/api/helpers"
+	"github.com/deveshmishra34/groot/pkg/clients/logger"
+	"github.com/deveshmishra34/groot/pkg/db/models"
 
 	"github.com/labstack/echo/v4"
 )

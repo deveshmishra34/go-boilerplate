@@ -1,15 +1,10 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package proc
 
 import (
 	"fmt"
 
-	"github.com/codoworks/go-boilerplate/pkg/tasks"
-	"github.com/codoworks/go-boilerplate/pkg/utils"
+	"github.com/deveshmishra34/groot/pkg/tasks"
+	"github.com/deveshmishra34/groot/pkg/utils"
 )
 
 func TaskExec(args []string) {

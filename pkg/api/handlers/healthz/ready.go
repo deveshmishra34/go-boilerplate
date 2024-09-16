@@ -1,16 +1,11 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package healthz
 
 import (
 	"net/http"
 
-	"github.com/codoworks/go-boilerplate/pkg/api/handlers"
-	"github.com/codoworks/go-boilerplate/pkg/api/helpers"
-	"github.com/codoworks/go-boilerplate/pkg/clients/dbc"
+	"github.com/deveshmishra34/groot/pkg/api/handlers"
+	"github.com/deveshmishra34/groot/pkg/api/helpers"
+	"github.com/deveshmishra34/groot/pkg/clients/dbc"
 
 	"github.com/labstack/echo/v4"
 )

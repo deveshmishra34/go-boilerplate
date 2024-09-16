@@ -1,14 +1,9 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package middlewares
 
 import (
 	"net/http"
 
-	"github.com/codoworks/go-boilerplate/pkg/clients/cors"
+	"github.com/deveshmishra34/groot/pkg/clients/cors"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

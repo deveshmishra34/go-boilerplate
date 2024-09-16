@@ -1,12 +1,7 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package info
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/proc"
+	"github.com/deveshmishra34/groot/pkg/proc"
 
 	"github.com/spf13/cobra"
 )

@@ -1,12 +1,7 @@
-/*
-Copyright © 2023 Codoworks
-Author:  Dexter Codo
-Contact: dexter.codo@gmail.com
-*/
 package seeds
 
 import (
-	"github.com/codoworks/go-boilerplate/pkg/db/models"
+	"github.com/deveshmishra34/groot/pkg/db/models"
 
 	"github.com/go-gormigrate/gormigrate/v2"
 	"gorm.io/gorm"
